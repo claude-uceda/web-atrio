@@ -21,7 +21,7 @@ namespace Webatrio.Employee.Api.Modules.Persons
             var result = await service.Add(model);
 
             if (result.Successful)
-                return Results.Ok();
+                return Results.Ok(new { id = result!.Value!.Id});
 
             return Results.Problem(result.Error!.Message, statusCode: 500);
         }
