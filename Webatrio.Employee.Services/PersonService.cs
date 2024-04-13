@@ -5,7 +5,7 @@ using Webatrio.Employee.Entities.Util;
 
 namespace Webatrio.Employee.Services
 {
-    public class PersonService
+    public class PersonService : IService 
     {
         private const int _AGE = 150;
 
