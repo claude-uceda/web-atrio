@@ -57,12 +57,15 @@ namespace Webatrio.Employee.Services.Test
         public async Task GetAllPersons()
         {
             var person = new Person { DateOfBirth = DateOnly.FromDateTime(DateTime.UtcNow), FirstName = "Juan", LastName = "Perez" };
+            var job = new JobExperience { Start = DateOnly.FromDateTime(DateTime.UtcNow), Name = "Job1" };
 
             var service = new PersonService(new InMemoryRepository<Person>());
-            var _= await service.Add(person);
-            var items = await service.GetAll(CancellationToken.None);
+            var pResult = await service.Add(person);
+            var _ = await service.AddJobExperience(pResult.Value.Id, job);
+            var items = (await service.GetAll(CancellationToken.None)).ToList();
 
-            Assert.IsTrue(items.Count() > 0);
+            Assert.IsTrue(items.Count > 0);
+            Assert.IsTrue(items[0].CurrentJobExperiences.Length > 0);
         }
     }
 }
