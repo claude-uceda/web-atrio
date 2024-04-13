@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Webatrio.Employee.Entities;
+using Webatrio.Employee.Core.Entities;
 using Webatrio.Employee.Services;
 
 namespace Webatrio.Employee.Api.Modules.Persons

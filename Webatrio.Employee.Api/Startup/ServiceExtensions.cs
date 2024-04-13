@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Webatrio.Employee.Api.Modules;
-using Webatrio.Employee.Entities;
-using Webatrio.Employee.Entities.Repositories;
-using Webatrio.Employee.Entities.Repositories.InMemory;
+using Webatrio.Employee.Core.Entities;
+using Webatrio.Employee.Core.Repositories;
+using Webatrio.Employee.Core.Repositories.InMemory;
 using Webatrio.Employee.Services;
 
 namespace Webatrio.Employee.Api.Startup

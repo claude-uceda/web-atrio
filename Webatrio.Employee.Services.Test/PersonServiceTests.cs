@@ -1,5 +1,6 @@
-using Webatrio.Employee.Entities;
-using Webatrio.Employee.Entities.Repositories.InMemory;
+using Webatrio.Employee.Core;
+using Webatrio.Employee.Core.Entities;
+using Webatrio.Employee.Core.Repositories.InMemory;
 
 namespace Webatrio.Employee.Services.Test
 {

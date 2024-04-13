@@ -1,15 +1,5 @@
-﻿namespace Webatrio.Employee.Entities
+﻿namespace Webatrio.Employee.Core.Entities
 {
-
-    public interface IEntity
-    {
-        Guid Id { get; set; }
-    }
-
-    public class Entity : IEntity
-    {
-        public Guid Id { get; set; }
-    }
 
     public class Person : Entity
     {

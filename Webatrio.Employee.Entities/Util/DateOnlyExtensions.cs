@@ -1,4 +1,4 @@
-﻿namespace Webatrio.Employee.Entities.Util
+﻿namespace Webatrio.Employee.Core.Util
 {
     public static class DateOnlyExtensions
     {

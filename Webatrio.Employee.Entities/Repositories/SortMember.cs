@@ -1,7 +1,8 @@
 ﻿
 using System.Linq.Expressions;
+using Webatrio.Employee.Core.Entities;
 
-namespace Webatrio.Employee.Entities.Repositories
+namespace Webatrio.Employee.Core.Repositories
 {
     public class SortMember<TEntity, T> where TEntity : IEntity
     {

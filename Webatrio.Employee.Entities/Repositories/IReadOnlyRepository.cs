@@ -1,7 +1,8 @@
 ﻿
 using System.Linq.Expressions;
+using Webatrio.Employee.Core.Entities;
 
-namespace Webatrio.Employee.Entities.Repositories
+namespace Webatrio.Employee.Core.Repositories
 {
     public interface IReadOnlyRepository<TEntity> : IRepository where TEntity : IEntity
     {

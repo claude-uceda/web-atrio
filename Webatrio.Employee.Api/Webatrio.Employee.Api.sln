@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webatrio.Employee.Api", "We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webatrio.Employee.Services", "..\Webatrio.Employee.Services\Webatrio.Employee.Services.csproj", "{7F3B3951-EAAB-443A-94FC-67D5AD924460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webatrio.Employee.Entities", "..\Webatrio.Employee.Entities\Webatrio.Employee.Entities.csproj", "{CC71A92B-10F4-4725-BEC5-7B923F73001B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webatrio.Employee.Core", "..\Webatrio.Employee.Entities\Webatrio.Employee.Core.csproj", "{CC71A92B-10F4-4725-BEC5-7B923F73001B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webatrio.Employee.Services.Test", "..\Webatrio.Employee.Services.Test\Webatrio.Employee.Services.Test.csproj", "{F745B0F6-6C56-49FB-9E8A-0F0166B4C0EB}"
 EndProject

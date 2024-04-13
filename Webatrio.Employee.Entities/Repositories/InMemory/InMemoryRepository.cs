@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Webatrio.Employee.Entities.Util;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Webatrio.Employee.Core.Entities;
+using Webatrio.Employee.Core.Util;
 
-namespace Webatrio.Employee.Entities.Repositories.InMemory
+namespace Webatrio.Employee.Core.Repositories.InMemory
 {
     public class InMemoryRepository<TEntity> : IRepository<TEntity> where TEntity : IEntity
     {

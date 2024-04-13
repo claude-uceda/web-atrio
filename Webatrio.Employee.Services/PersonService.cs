@@ -1,7 +1,8 @@
 ﻿
 using Webatrio.Employee.Entities;
-using Webatrio.Employee.Entities.Repositories;
-using Webatrio.Employee.Entities.Util;
+using Webatrio.Employee.Core.Repositories;
+using Webatrio.Employee.Core.Util;
+using Webatrio.Employee.Core.Entities;
 
 namespace Webatrio.Employee.Services
 {

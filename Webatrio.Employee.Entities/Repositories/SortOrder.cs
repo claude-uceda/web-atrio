@@ -1,4 +1,4 @@
-﻿namespace Webatrio.Employee.Entities.Repositories
+﻿namespace Webatrio.Employee.Core.Repositories
 {
     public enum SortOrder
     {

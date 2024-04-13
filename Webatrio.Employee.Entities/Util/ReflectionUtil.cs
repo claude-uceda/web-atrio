@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Reflection;
 
-namespace Webatrio.Employee.Entities.Util
+namespace Webatrio.Employee.Core.Util
 {
     public class ReflectionUtil
     {
