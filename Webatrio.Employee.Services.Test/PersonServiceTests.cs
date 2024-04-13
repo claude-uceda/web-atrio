@@ -30,7 +30,7 @@ namespace Webatrio.Employee.Services.Test
         [TestMethod]
         public async Task AddExtraOldPerson()
         {
-            var person = new Person { DateOfBirth = DateOnly.FromDateTime(DateTime.UtcNow.AddYears(200)), FirstName = "Juan", LastName = "Perez" };
+            var person = new Person { DateOfBirth = DateOnly.FromDateTime(DateTime.UtcNow.AddYears(-200)), FirstName = "Juan", LastName = "Perez" };
 
             var service = new PersonService(new InMemoryRepository<Person>());
             var result = await service.Add(person);
