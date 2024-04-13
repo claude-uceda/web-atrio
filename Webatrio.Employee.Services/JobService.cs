@@ -2,7 +2,7 @@
 using Webatrio.Employee.Core.Repositories.InMemory;
 using Webatrio.Employee.Entities;
 
-namespace Webatrio.Employee.Services.Test
+namespace Webatrio.Employee.Services
 {
     public class JobService
     {

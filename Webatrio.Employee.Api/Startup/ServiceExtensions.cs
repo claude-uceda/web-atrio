@@ -15,7 +15,10 @@ namespace Webatrio.Employee.Api.Startup
             //todo use assembly scan
 
             services.TryAddScoped<IReadOnlyRepository<Person>>((_)=> new InMemoryRepository<Person>());            
-            services.TryAddScoped<IRepository<Person>>((_)=> new InMemoryRepository<Person>());            
+            services.TryAddScoped<IRepository<Person>>((_)=> new InMemoryRepository<Person>());
+
+            services.TryAddScoped<IReadOnlyRepository<JobExperience>>((_) => new InMemoryRepository<JobExperience>());
+            services.TryAddScoped<IRepository<JobExperience>>((_) => new InMemoryRepository<JobExperience>());
 
             return services;
         }
