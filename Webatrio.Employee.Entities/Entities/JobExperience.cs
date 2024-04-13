@@ -1,9 +1,7 @@
 ﻿namespace Webatrio.Employee.Core.Entities
 {
-    public class JobExperience : Entity
+    public class JobExperience
     {
-        public required Guid PersonId { get; init; }
-
         public required DateOnly Start { get; init; }
 
         public DateOnly? End { get; set; }

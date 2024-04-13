@@ -3,6 +3,7 @@ using Webatrio.Employee.Entities;
 using Webatrio.Employee.Core.Repositories;
 using Webatrio.Employee.Core.Util;
 using Webatrio.Employee.Core.Entities;
+using Webatrio.Employee.Services.Models;
 
 namespace Webatrio.Employee.Services
 {
@@ -35,6 +36,31 @@ namespace Webatrio.Employee.Services
             }
 
             return person;
+        }
+
+        public async Task<OperationResult<JobExperience>> AddJobExperience(Guid personId, JobExperience jobExperience)
+        {
+            var person = await _personRepository.GetOneAsync(personId, CancellationToken.None);
+            if (person == null)
+                return new Exception("User not found");
+
+            person.JobExperiences.Add(jobExperience);
+
+            return jobExperience;
+        }
+
+        public async Task<IEnumerable<FullPerson>> GetAll(CancellationToken cancellationToken)
+        {
+            var persons = await _personRepository.GetAsync(x=> true, -1, -1,new SortMember<Person, object> {MemberExpression = x=>x.LastName, Order = SortOrder.Ascending } , cancellationToken);
+
+            return persons.Select(item => new FullPerson
+            {
+                FirstName = item.FirstName,
+                CurrentJobExperiences = item.JobExperiences.Where(x => x.End == null).ToArray(),
+                JobExperiences = item.JobExperiences.ToArray(),
+                DateOfBirth = item.DateOfBirth,
+                LastName = item.LastName,
+            });
         }
     }
 }

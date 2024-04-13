@@ -16,12 +16,12 @@ namespace Webatrio.Employee.Api.Modules.JobExperiences
             return endpoints;
         }
 
-        internal virtual async Task<IResult> AddJobExperience([FromServices] JobService service, [FromBody] JobExperience model, [FromRoute] Guid id, CancellationToken cancellationToken)
+        internal virtual async Task<IResult> AddJobExperience([FromServices] PersonService service, [FromBody] JobExperience model, [FromRoute] Guid id, CancellationToken cancellationToken)
         {
-            var result = await service.Add(model);
+            var result = await service.AddJobExperience(id, model);
 
             if (result.Successful)
-                return Results.Ok(new { id = result!.Value!.Id });
+                return Results.Ok();
 
             return Results.Problem(result.Error!.Message, statusCode: 500);
         }
